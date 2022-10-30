@@ -4,6 +4,8 @@ import AngajatiApp.controller.DidacticFunction;
 import AngajatiApp.validator.EmployeeException;
 import AngajatiApp.validator.EmployeeValidator;
 
+import java.util.Objects;
+
 public class Employee {
 
 	private static final int LAST_NAME_INDEX = 1;
@@ -40,7 +42,7 @@ public class Employee {
 		this.function  = function;
 		this.salary    = salary;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
@@ -100,7 +102,7 @@ public class Employee {
 		employee += id;
 		return employee;
 	}
-	
+
 	@Override
 	public boolean equals(Object otherEmployee) {
 		if (otherEmployee == this) {
@@ -114,7 +116,7 @@ public class Employee {
 				hasSameLastName  = this.nume.equals(employee.getLastName()),
 				hasSameCNP       = this.cnp.equals(employee.getCnp()),
 				hasSameFunction  = this.function.equals(employee.getFunction()),
-				hasSameSalary    = this.salary.equals(employee.getSalary());
+				hasSameSalary    = Objects.equals(this.salary, employee.getSalary());
 		return hasSameFirstName && hasSameLastName && hasSameCNP && hasSameFunction && hasSameSalary;
 	}
 	

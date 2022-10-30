@@ -10,7 +10,7 @@ public class EmployeeValidator {
 		return isFirstNameValid(employee) 
 				&& isLastNameValid(employee) 
 				&& isCnpValid(employee) 
-				&& isFunctionValid(employee) 
+				&& isFunctionValid(employee)
 				&& isSalaryValid(employee);
 	}
 
@@ -19,10 +19,11 @@ public class EmployeeValidator {
 	}
 
 	private boolean isFunctionValid(Employee employee) {
-		return employee.getFunction().equals(DidacticFunction.ASISTENT)
-				|| employee.getFunction().equals(DidacticFunction.LECTURER) 
-				|| employee.getFunction().equals(DidacticFunction.TEACHER) 
-				|| employee.getFunction().equals(DidacticFunction.CONFERENTIAR);
+		return employee.getFunction() != null &&
+				(employee.getFunction().equals(DidacticFunction.ASISTENT)
+				|| employee.getFunction().equals(DidacticFunction.LECTURER)
+				|| employee.getFunction().equals(DidacticFunction.TEACHER)
+				|| employee.getFunction().equals(DidacticFunction.CONFERENTIAR));
 	}
 
 	private boolean isCnpValid(Employee employee) {
@@ -34,7 +35,7 @@ public class EmployeeValidator {
 	}
 
 	private boolean isFirstNameValid(Employee employee) {
-		return employee.getFirstName().matches("[a-zA-Z]+") && (employee.getFirstName().length() > 2);
+		return employee.getFirstName().matches("[a-zA-Z]+") && (employee.getFirstName().length() >= 2);
 	}
 	
 }
