@@ -59,4 +59,8 @@ class EmployeeMockTestWBT {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             employeeRepository.modifyEmployeeFunction(employeeList.get(8), DidacticFunction.CONFERENTIAR);});
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
