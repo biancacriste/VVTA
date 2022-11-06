@@ -1,7 +1,6 @@
 package AngajatiApp.repository;
 
 import AngajatiApp.controller.DidacticFunction;
-import AngajatiApp.controller.EmployeeController;
 import AngajatiApp.model.Employee;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +10,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class EmployeeMockTest {
+class EmployeeMockTestWBT {
     EmployeeRepositoryInterface employeeRepository = new EmployeeMock();
     List<Employee> employeeList;
 
@@ -56,7 +55,7 @@ class EmployeeMockTest {
     @Test
 //    i < employeeList.size() -> FALSE
 //    employee id = 8
-    void modifyEmployeeFunctionTC0ss1() {
+    void modifyEmployeeFunctionTC03() {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             employeeRepository.modifyEmployeeFunction(employeeList.get(8), DidacticFunction.CONFERENTIAR);});
     }
