@@ -48,11 +48,13 @@ public class EmployeeMock implements EmployeeRepositoryInterface {
 
 	/**
 	 * Modifica atributul 'functia didactica' pentru un angajat dat
-	 * @param employee - anagajtul eptnru care se modifica atributul 'functia didactica'
+	 *
+	 * @param employee    - anagajtul eptnru care se modifica atributul 'functia didactica'
 	 * @param newFunction - noua functie didactica (ASISTENT, LECTURER, TEACHER, CONFERENTIAR)
+	 * @return
 	 */
 	@Override
-	public void modifyEmployeeFunction(Employee employee, DidacticFunction newFunction) {
+	public List<Employee> modifyEmployeeFunction(Employee employee, DidacticFunction newFunction) {
 
 		if (employee!=null) {
 			int i = 0;
@@ -62,6 +64,7 @@ public class EmployeeMock implements EmployeeRepositoryInterface {
 				i++;
 			}
 		}
+		return null;
 	}
 
 	@Override

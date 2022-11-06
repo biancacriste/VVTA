@@ -6,6 +6,8 @@ import AngajatiApp.model.Employee;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class EmployeeMockTest {
@@ -129,5 +131,4 @@ class EmployeeMockTest {
         boolean bool = employeeMock.addEmployee(employee7);
         assertTrue(bool, "true");
     }
-
 }

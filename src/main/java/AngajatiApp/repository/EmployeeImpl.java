@@ -43,9 +43,10 @@ public class EmployeeImpl implements EmployeeRepositoryInterface {
 	}
 
 	@Override
-	public void modifyEmployeeFunction(Employee oldEmployee, DidacticFunction newFunction) {
+	public List<Employee> modifyEmployeeFunction(Employee oldEmployee, DidacticFunction newFunction) {
 		oldEmployee.setFunction(newFunction);
-	}
+        return null;
+    }
 	
 	private List<Employee> loadEmployeesFromFile() {
 		final List<Employee> employeeList = new ArrayList<Employee>();
